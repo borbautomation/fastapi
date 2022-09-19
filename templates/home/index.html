@@ -1,0 +1,50 @@
+{% extends "shared/layout.html" %}
+
+{% block content %}
+
+    <img src="/static/img/cloud.png" style="float: left; max-width: 48px; margin-right: 20px;" alt="">
+
+    <h1><span class="font-semi-bold">Servicio de cable</span> <span class="smaller">Programa para calcular cable</span>
+    </h1>
+
+    <div style="clear:both;"></div>
+    <br>
+    <br>
+    <p class="lead">
+        Un servicio de <a href="https://training.talkpython.fm/">Borbolla Automation Inc.</a> <br>
+        <br>
+        <strong>Endpoints</strong>
+    <ul>
+        <li>
+            <strong>Current weather in a city</strong><br>
+            <a href="/api/kva2cable?kva=80"
+               target="_blank"
+            ><strong>GET /api/kva2cable?kva={kva}</strong></a><br>
+            <br>
+            <div style="font-size: 12px;">
+                <strong>Parametros</strong>
+                <ul>
+                    <li><strong>Requeridos</strong>: <code>kva={kva}</code> - Los KVA de operacion.
+                    </li>
+                    <li>Opcional: <code>longitud={longitud}</code> - La longitud del cable que se instalara.
+                    </li>
+                    <li>Optional: <code>hilos={hilos}</code> - hilos por linea para calculo.
+                    </li>
+                    
+                </ul>
+
+                <strong>Respuesta JSON</strong>
+                <ul>
+                    <li>Haz Click <a href="/api/kva2cable?kva=100"
+                                 target="_blank"
+                    >en el link </a> para ver un ejemplo de salida.
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+    </p>
+
+    </div>
+
+{% endblock %}
